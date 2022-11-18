@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Calculator</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <h1>Calculator</h1>
+    <form name ="form1" class ="calcAction" action="calc.html" method="POST">
+        <input type="text" name="screen" id="display">
+        <br>
+        <br>
+        <input type="button" class="buttonDesign" value="AC" onclick="form1.screen.value=''">
+        <input type="button" class="buttonDesign" value="B" onclick="form1.screen.value=form1.screen.value.substring(0,form1.screen.value.length*1-1)">
+        <input type="button" class="buttonDesign" value="00" onclick="form1.screen.value+='00'">
+        <input type="button" class="buttonDesign" value="/" onclick="form1.screen.value+='/'">
+        <br>
+        <br>
+        <input type="button" class="buttonDesign" value="7" onclick="form1.screen.value+='7'">
+        <input type="button" class="buttonDesign" value="8" onclick="form1.screen.value+='8'">
+        <input type="button" class="buttonDesign" value="9" onclick="form1.screen.value+='9'">
+        <input type="button" class="operatorDesign" value="*" onclick="form1.screen.value+='*'">
+        <br>
+        <br>
+        <input type="button" class="buttonDesign" value="4" onclick="form1.screen.value+='4'">
+        <input type="button" class="buttonDesign" value="5" onclick="form1.screen.value+='5'">
+        <input type="button" class="buttonDesign" value="6" onclick="form1.screen.value+='6'">
+        <input type="button" class="operatorDesign" value="-" onclick="form1.screen.value+='-'">
+        <br>
+        <br>
+        <input type="button" class="buttonDesign" value="1" onclick="form1.screen.value+='1'">
+        <input type="button" class="buttonDesign" value="2" onclick="form1.screen.value+='2'">
+        <input type="button" class="buttonDesign" value="3" onclick="form1.screen.value+='3'">
+        <input type="button" class="operatorDesign" value="+" onclick="form1.screen.value+='+'">
+        <br>
+        <br>
+        <input type="button" class="zeroDesign" value="0" onclick="form1.screen.value+='0'">
+        <input type="button" class="buttonDesign" value="." onclick="form1.screen.value+='.'">
+        <input type="button" class="operatorDesign" value="=" onclick="form1.screen.value=evaluvator(form1.screen.value)">
+        <br>
+        <br>        
+        
+       
+    </form>
+    <script>
+        function evaluvator(str)
+        {
+            return eval(str);
+            
+        }
+    </script>
+    
+   
+</html>
